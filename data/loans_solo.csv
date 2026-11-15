@@ -1,0 +1,25 @@
+LoanID,AssetID,BorrowerID,Purpose,LoanDate,DueDate,ReturnedDate,DeskNote
+L-0001,A04,B01,Course,2026-10-02,2026-10-12,2026-10-10,Clean and working.
+L-0002,A02,B05,Thesis,2026-10-17,2026-12-25,,"Device still out; reminder email sent, no answer so far."
+L-0003,A06,B01,Course,2026-10-03,2026-10-10,2026-10-09,"Damaged display, needs repair before the next loan."
+L-0004,A10,B10,Event,2026-10-18,2026-10-25,,"Open loan, nothing to report."
+,A01,B04,Research,2026-10-29,2026-11-08,,"Open loan, nothing to report."
+L-0005,A02,B01,Thesis,2026-10-04,2026-10-07,2026-10-09,"Device tested on return, works fine. Nothing missing."
+L-0006,A05,B04,Thesis,2026-10-23,2026-10-30,,Not returned yet. No message from the borrower.
+L-0007,A07,B09,Course,2026-10-03,2026-10-10,2026-10-10,Checked at the desk: no visible issues. The USB-C cable is missing.
+L-0006,A10,B10,Event,2026-10-18,2026-10-25,,"Light scratches on the casing, normal wear."
+L-0008,A03,B05,Course,2026-09-01,2026-09-08,2026-09-07,"Light scratches on the casing, normal wear."
+L-0009,A01,B04,Research,2026-10-29,2026-11-08,,Not back yet. Borrower emailed that the project runs longer and asked to keep it one more week.
+L-0063,UNKNOWN-01,B10,Thesis,2026-10-07,2026-10-21,,Clean and working. The windscreen is missing.
+L-0010,A08,B08,Event,2026-09-15,2026-09-22,2026-09-22,"Some signs of use, works normally."
+L-0011,A04,B05,Event,2026-10-09,2026-10-23,,"Open loan, nothing to report."
+L-0012,A07,B02,Research,2026-10-06,2026-10-13,2026-10-13,Checked at the desk: no visible issues. Nothing missing.
+L-0064,A03,B05,Course,2026-02-30,2026-09-08,2026-09-07,Checked at the desk: no visible issues.
+L-0013,A04,B09,Event,2026-09-17,2026-09-27,2026-09-27,"Damaged screen, needs repair before the next loan. Missing items: USB-C dongle and power adapter."
+L-0014,A03,B07,Research,2026-10-29,2026-11-26,,"Device still out; reminder email sent, no answer so far."
+L-0015,A05,B02,Research,2026-10-11,2026-10-14,2026-10-14,"Light scratches on the casing, normal wear."
+L-0065,A05,B10,coursex,2026-10-07,2026-10-21,,"Light scratches on the casing, normal wear."
+L-0016,A04,B09,Thesis,2026-10-24,2026-12-26,,Not returned yet. No message from the borrower.
+L-0017,A10,B08,Event,2026-09-27,2026-09-30,2026-09-28,Clean and working. Complete kit.
+L-0066,A04,B09,COURSE,2026-10-24,2026-12-26,,Not returned yet. No message from the borrower.
+L-0018,A05,B10,Thesis,2026-10-07,2026-10-21,,Not back yet. Borrower emailed that the project runs longer and asked to keep it one more week.

@@ -1,0 +1,11 @@
+DevID,Text,gold_item_condition,gold_missing_accessories,gold_extension_requested
+DEV-01,"Device tested on return, works fine. Complete kit.",good,[],false
+DEV-02,"Light scratches on the casing, normal wear.",worn,[],false
+DEV-03,"Damaged mic capsule, needs repair before the next loan.",damaged,[],false
+DEV-04,Checked at the desk: no visible issues. The power cable is missing.,good,"[""power cable""]",false
+DEV-05,The fan is cracked. Missing items: remote control and HDMI cable.,damaged,"[""remote control"", ""HDMI cable""]",false
+DEV-06,"Borrower called the desk: needs the device until the exhibition is over, asks for an extension.",not_inspected,[],true
+DEV-07,Not returned yet. No message from the borrower.,not_inspected,[],false
+DEV-08,"Some signs of use, works normally. Returned without the stylus.",worn,"[""stylus""]",false
+DEV-09,Checked at the desk: no visible issues.,good,[],false
+DEV-10,The input jack is cracked. Returned without the windscreen.,damaged,"[""windscreen""]",false

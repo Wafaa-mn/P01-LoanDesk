@@ -1,0 +1,11 @@
+BorrowerID,BorrowerAlias,Faculty,BorrowerType,MaxOpenLoans
+B01,Anna K.,Informatics,Student,2
+B02,Bence T.,Economics,Student,2
+B03,Csilla M.,Arts,Student,2
+B04,Dávid R.,Engineering,Student,2
+B05,Eszter V.,Informatics,Student,2
+B06,Ferenc L.,Informatics,Staff,4
+B07,Gábor N.,Arts,Staff,4
+B08,Hanna S.,Medicine,Student,2
+B09,István P.,Economics,Staff,4
+B10,Judit B.,Engineering,Student,2

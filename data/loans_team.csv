@@ -1,0 +1,67 @@
+LoanID,AssetID,BorrowerID,Purpose,LoanDate,DueDate,ReturnedDate,DeskNote
+L-0001,A04,B01,Course,2026-10-02,2026-10-12,2026-10-10,Clean and working.
+L-0002,A02,B05,Thesis,2026-10-17,2026-12-25,,"Device still out; reminder email sent, no answer so far."
+L-0003,A06,B01,Course,2026-10-03,2026-10-10,2026-10-09,"Damaged display, needs repair before the next loan."
+L-0004,A10,B10,Event,2026-10-18,2026-10-25,,"Open loan, nothing to report."
+L-0005,A02,B01,Thesis,2026-10-04,2026-10-07,2026-10-09,"Device tested on return, works fine. Nothing missing."
+L-0006,A05,B04,Thesis,2026-10-23,2026-10-30,,Not returned yet. No message from the borrower.
+L-0007,A07,B09,Course,2026-10-03,2026-10-10,2026-10-10,Checked at the desk: no visible issues. The USB-C cable is missing.
+,A01,B04,Research,2026-10-29,2026-11-08,,"Open loan, nothing to report."
+L-0008,A03,B05,Course,2026-09-01,2026-09-08,2026-09-07,"Light scratches on the casing, normal wear."
+L-0009,A01,B04,Research,2026-10-29,2026-11-08,,Not back yet. Borrower emailed that the project runs longer and asked to keep it one more week.
+L-0010,A08,B08,Event,2026-09-15,2026-09-22,2026-09-22,"Some signs of use, works normally."
+L-0011,A04,B05,Event,2026-10-09,2026-10-23,,"Open loan, nothing to report."
+L-0012,A07,B02,Research,2026-10-06,2026-10-13,2026-10-13,Checked at the desk: no visible issues. Nothing missing.
+L-0013,A04,B09,Event,2026-09-17,2026-09-27,2026-09-27,"Damaged screen, needs repair before the next loan. Missing items: USB-C dongle and power adapter."
+L-0014,A03,B07,Research,2026-10-29,2026-11-26,,"Device still out; reminder email sent, no answer so far."
+L-0015,A05,B02,Research,2026-10-11,2026-10-14,2026-10-14,"Light scratches on the casing, normal wear."
+L-0016,A04,B09,Thesis,2026-10-24,2026-12-26,,Not returned yet. No message from the borrower.
+L-0017,A10,B08,Event,2026-09-27,2026-09-30,2026-09-28,Clean and working. Complete kit.
+L-0018,A05,B10,Thesis,2026-10-07,2026-10-21,,Not back yet. Borrower emailed that the project runs longer and asked to keep it one more week.
+L-0006,A10,B10,Event,2026-10-18,2026-10-25,,"Light scratches on the casing, normal wear."
+L-0019,A04,B07,Research,2026-09-18,2026-09-21,2026-09-19,Returned in good condition.
+L-0020,A08,B03,Event,2026-10-29,2026-11-08,,Not returned yet. No message from the borrower.
+L-0021,A05,B07,Course,2026-09-02,2026-09-09,2026-09-09,Returned in good condition. Complete kit.
+L-0022,A10,B05,Course,2026-10-05,2026-10-15,2026-10-13,Rubber grip is a bit worn but everything works.
+L-0023,A03,B09,Course,2026-10-12,2026-10-22,2026-10-22,"Damaged screen, needs repair before the next loan."
+L-0024,A07,B09,Event,2026-09-20,2026-09-27,2026-09-27,"Light scratches on the casing, normal wear."
+L-0063,UNKNOWN-01,B10,Thesis,2026-10-07,2026-10-21,,Clean and working. The windscreen is missing.
+L-0025,A07,B09,Thesis,2026-09-27,2026-10-11,2026-10-10,"Device tested on return, works fine."
+L-0026,A09,B03,Course,2026-10-29,2026-11-26,,"Device still out; reminder email sent, no answer so far."
+L-0027,A03,B03,Thesis,2026-10-29,2026-11-24,,"Open loan, nothing to report."
+L-0028,A09,B02,Event,2026-09-23,2026-09-30,2026-09-30,Returned in good condition. Nothing missing.
+L-0029,A10,B08,Course,2026-10-10,2026-10-24,2026-10-24,Borrower dropped it; the motor arm is broken.
+L-0030,A10,B04,Event,2026-09-22,2026-09-29,2026-09-29,Checked at the desk: no visible issues. All accessories present.
+L-0031,A04,B04,Course,2026-10-08,2026-10-22,2026-10-21,"Device tested on return, works fine. Complete kit."
+L-0032,A01,B06,Research,2026-10-14,2026-11-04,,"Open loan, nothing to report."
+L-0033,A08,B06,Event,2026-10-29,2026-12-09,,Not back yet. Borrower emailed that the project runs longer and asked to keep it one more week.
+L-0034,A01,B10,Thesis,2026-10-11,2026-10-25,2026-10-25,Checked at the desk: no visible issues.
+L-0035,A07,B06,Research,2026-10-12,2026-12-26,,Not returned yet. No message from the borrower.
+L-0064,A03,B05,Course,2026-02-30,2026-09-08,2026-09-07,Checked at the desk: no visible issues.
+L-0036,A09,B08,Research,2026-09-29,2026-10-13,2026-10-11,Rubber grip is a bit worn but everything works. All accessories present.
+L-0037,A06,B06,Event,2026-10-04,2026-10-18,,"Device still out; reminder email sent, no answer so far."
+L-0038,A07,B08,Event,2026-10-10,2026-10-24,2026-10-22,Clean and working. The windscreen is missing.
+L-0039,A08,B08,Course,2026-09-08,2026-09-22,2026-09-21,"Light scratches on the casing, normal wear."
+L-0040,A01,B08,Research,2026-10-11,2026-10-21,2026-10-19,"Device tested on return, works fine. Kit incomplete: no battery charger."
+L-0041,A07,B08,Thesis,2026-10-24,2026-12-25,,Not back yet. Borrower emailed that the project runs longer and asked to keep it one more week.
+L-0042,A08,B04,Event,2026-09-15,2026-09-25,2026-09-23,Clean and working. All accessories present.
+L-0043,A06,B07,Event,2026-10-07,2026-10-12,2026-10-10,Clean and working. The windscreen is missing.
+L-0065,A05,B10,coursex,2026-10-07,2026-10-21,,"Light scratches on the casing, normal wear."
+L-0044,A05,B07,Course,2026-09-06,2026-09-11,2026-09-10,Rubber grip is a bit worn but everything works.
+L-0045,A07,B05,Course,2026-10-25,2026-11-08,,"Borrower called the desk: needs the device until the exhibition is over, asks for an extension."
+L-0046,A10,B04,Course,2026-10-23,2026-10-30,,"Device still out; reminder email sent, no answer so far."
+L-0047,A02,B09,Event,2026-10-21,2026-10-28,,Still out. Request received for a short extension because of a thesis deadline.
+L-0048,A07,B08,Thesis,2026-10-29,2026-12-06,,"Open loan, nothing to report."
+L-0049,A04,B04,Thesis,2026-10-29,2026-11-16,,"Device still out; reminder email sent, no answer so far."
+L-0050,A06,B07,Research,2026-09-22,2026-10-02,2026-10-05,Checked at the desk: no visible issues.
+L-0066,A04,B09,COURSE,2026-10-24,2026-12-26,,Not returned yet. No message from the borrower.
+L-0051,A08,B01,Course,2026-09-29,2026-10-06,2026-10-04,Borrower dropped it; the lens is broken.
+L-0052,A10,B01,Event,2026-09-30,2026-10-05,2026-10-07,"Device tested on return, works fine. Complete kit."
+L-0053,A01,B04,Research,2026-10-12,2026-10-26,2026-10-25,"Device tested on return, works fine."
+L-0054,A05,B09,Thesis,2026-10-29,2026-11-18,,"Borrower called the desk: needs the device until the exhibition is over, asks for an extension."
+L-0055,A03,B07,Course,2026-10-08,2026-12-25,,"Device still out; reminder email sent, no answer so far."
+L-0056,A08,B07,Thesis,2026-10-05,2026-10-12,,"Device still out; reminder email sent, no answer so far."
+L-0057,A05,B07,Course,2026-09-02,2026-09-07,2026-09-05,Rubber grip is a bit worn but everything works. Nothing missing.
+L-0058,A08,B09,Thesis,2026-09-23,2026-09-30,2026-10-06,"Device tested on return, works fine."
+L-0059,A05,B08,Course,2026-09-11,2026-09-18,2026-09-20,Rubber grip is a bit worn but everything works. Nothing missing.
+L-0060,A08,B08,Course,2026-09-22,2026-10-06,2026-10-06,Checked at the desk: no visible issues.
