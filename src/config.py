@@ -52,3 +52,18 @@ VALIDATION_ORDER = [
     "INVALID_DATE",
     "INVALID_VALUE",
 ]
+
+# Nager.Date public holiday API
+HOLIDAY_API_URL = (
+    "https://date.nager.at/api/v3/PublicHolidays/2026/HU"
+)
+
+# Cache for the original API response
+CACHE_DIR = OUTPUT_DIR / "cache"
+HOLIDAY_CACHE_FILE = CACHE_DIR / "public_holidays_2026_HU.json"
+
+# HTTP request timeout in seconds
+API_TIMEOUT = 10
+
+# SQLite database
+DATABASE_FILE = OUTPUT_DIR / "loandesk.db"
