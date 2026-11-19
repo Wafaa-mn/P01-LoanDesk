@@ -223,3 +223,83 @@ def insert_holidays(
         """,
         holiday_rows,
     )
+
+
+
+def insert_flags(
+    connection: sqlite3.Connection,
+    flags: pd.DataFrame,
+) -> None:
+    """Insert generated rule flags into SQLite."""
+    if flags.empty:
+        return
+
+    rows = [
+        (
+            str(row["RecordID"]),
+            str(row["RuleID"]),
+            str(row["ReasonCode"]),
+            str(row["Severity"]),
+            float(row["RiskScore"]),
+        )
+        for _, row in flags.iterrows()
+    ]
+
+    connection.executemany(
+        """
+        INSERT INTO flags (
+            RecordID,
+            RuleID,
+            ReasonCode,
+            Severity,
+            RiskScore
+        )
+        VALUES (?, ?, ?, ?, ?)
+        """,
+        rows,
+    )
+
+
+def insert_cases(
+    connection: sqlite3.Connection,
+    cases: pd.DataFrame,
+) -> None:
+    """Insert generated review cases into SQLite."""
+    if cases.empty:
+        return
+
+    rows = [
+        (
+            str(row["CaseID"]),
+            str(row["Severity"]),
+            float(row["RiskScore"]),
+            str(row["ReasonCodes"]),
+            str(row["Status"]),
+            str(row["AssetName"]),
+            str(row["BorrowerAlias"]),
+            str(row["DueDate"]),
+            row["ReturnedDate"] or None,
+            row["item_condition"] or None,
+        )
+        for _, row in cases.iterrows()
+    ]
+
+    connection.executemany(
+        """
+        INSERT INTO cases (
+            CaseID,
+            Severity,
+            RiskScore,
+            ReasonCodes,
+            Status,
+            AssetName,
+            BorrowerAlias,
+            DueDate,
+            ReturnedDate,
+            item_condition
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        rows,
+    )
+    
