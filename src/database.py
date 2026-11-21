@@ -200,6 +200,45 @@ def insert_accepted_loans(
     )
 
 
+def insert_extractions(
+    connection: sqlite3.Connection,
+    extractions: pd.DataFrame,
+) -> None:
+    """Insert Gemini extraction results into SQLite."""
+    if extractions.empty:
+        return
+
+    rows = []
+
+    for row in extractions.to_dict("records"):
+        rows.append(
+            (
+                str(row["RecordID"]),
+                row.get("item_condition"),
+                row.get("missing_accessories"),
+                (
+                    str(row["extension_requested"])
+                    if pd.notna(row.get("extension_requested"))
+                    else None
+                ),
+                str(row["ExtractionStatus"]),
+            )
+        )
+
+    connection.executemany(
+        """
+        INSERT INTO extractions (
+            RecordID,
+            item_condition,
+            missing_accessories,
+            extension_requested,
+            ExtractionStatus
+        )
+        VALUES (?, ?, ?, ?, ?)
+        """,
+        rows,
+    )
+
 def insert_holidays(
     connection: sqlite3.Connection,
     holidays: pd.DataFrame,

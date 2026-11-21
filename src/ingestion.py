@@ -4,22 +4,24 @@ from __future__ import annotations
 from pathlib import Path
 
 import pandas as pd
-from src.cases import generate_cases
-from src.rules import generate_flags
 
 from src.api_client import get_national_holidays
+from src.cases import generate_cases
+from src.config import EXTRACTION_CACHE_DIR
 from src.data_loader import load_cases, load_master_data
 from src.database import (
     connect_database,
     create_database,
     insert_accepted_loans,
+    insert_extractions,
     insert_holidays,
     insert_master_data,
     insert_flags,
     insert_cases,
 )
+from src.extraction_enrichment import extract_dataframe
+from src.rules import generate_flags
 from src.validation import validate_input
-
 
 
 def run_ingestion(
@@ -30,13 +32,14 @@ def run_ingestion(
     database_path: Path,
     holiday_cache_path: Path,
     scope: str = "team",
+    extraction_client=None,
 ) -> dict[str, int]:
-    """Run validation, rule evaluation, and case generation."""
+    """Run validation, Gemini extraction, rules, and case generation."""
 
     if scope not in {"team", "solo"}:
         raise ValueError("scope must be either 'team' or 'solo'.")
 
-    # 1. Load and validate the input data.
+    # 1. Load and validate input data.
     loans = load_cases(loans_path)
     assets, borrowers = load_master_data(
         assets_path,
@@ -52,19 +55,28 @@ def run_ingestion(
     # 2. Retrieve nationwide Hungarian public holidays.
     holidays = get_national_holidays(holiday_cache_path)
 
-    # 3. Gemini integration comes later.
-    # Until then, no extraction results are available.
-    extractions = pd.DataFrame(
-        columns=[
-            "RecordID",
-            "item_condition",
-            "missing_accessories",
-            "extension_requested",
-            "ExtractionStatus",
-        ]
+    # 3. Extract information from accepted loan notes using Gemini.
+    raw_extractions = extract_dataframe(
+        accepted,
+        client=extraction_client,
+        cache_dir=EXTRACTION_CACHE_DIR,
+        output_file=output_dir / "extractions.csv",
     )
 
-    # 4. Generate rule flags and review cases.
+    # 4. Adapt Gemini output to the format expected by rules and cases.
+    extractions = raw_extractions.rename(
+        columns={
+            "LoanID": "RecordID",
+            "extraction_status": "ExtractionStatus",
+        }
+    ).copy()
+
+    extractions["ExtractionStatus"] = (
+        extractions["ExtractionStatus"]
+        .replace({"ok": "success"})
+    )
+
+    # 5. Generate rule flags and review cases.
     flags = generate_flags(
         accepted,
         borrowers,
@@ -81,7 +93,7 @@ def run_ingestion(
         flags,
     )
 
-    # 5. Rebuild the database and insert all records.
+    # 6. Rebuild the database and insert all records.
     create_database(database_path)
 
     connection = connect_database(database_path)
@@ -89,6 +101,7 @@ def run_ingestion(
     try:
         insert_master_data(connection, assets, borrowers)
         insert_accepted_loans(connection, accepted)
+        insert_extractions(connection, extractions)
         insert_holidays(connection, holidays)
         insert_flags(connection, flags)
         insert_cases(connection, cases)
@@ -102,7 +115,7 @@ def run_ingestion(
     finally:
         connection.close()
 
-    # 6. Export pipeline outputs.
+    # 7. Export pipeline outputs.
     output_dir.mkdir(parents=True, exist_ok=True)
 
     accepted.to_csv(
@@ -132,6 +145,7 @@ def run_ingestion(
         "asset_records": len(assets),
         "borrower_records": len(borrowers),
         "holiday_records": len(holidays),
+        "extraction_records": len(extractions),
         "flag_records": len(flags),
         "case_records": len(cases),
     }

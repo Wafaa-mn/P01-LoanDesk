@@ -1,4 +1,3 @@
-
 import sqlite3
 import pandas as pd
 import pytest
@@ -77,6 +76,37 @@ def test_run_ingestion_loads_and_stores_data(tmp_path, monkeypatch):
         lambda cache_path: holidays,
     )
 
+    def fake_extract_dataframe(
+        loans,
+        client=None,
+        cache_dir=None,
+        output_file=None,
+    ):
+        extractions = pd.DataFrame([
+            {
+                "LoanID": loan_id,
+                "item_condition": "damaged",
+                "missing_accessories": "[]",
+                "extension_requested": False,
+                "extraction_status": "ok",
+                "extraction_error": None,
+            }
+            for loan_id in loans["LoanID"]
+        ])
+
+        if output_file is not None:
+            output_file.parent.mkdir(parents=True, exist_ok=True)
+            extractions.to_csv(output_file, index=False)
+
+        return extractions
+
+
+    monkeypatch.setattr(
+        ingestion,
+        "extract_dataframe",
+        fake_extract_dataframe,
+    )
+
     output_dir = tmp_path / "output"
     database_path = output_dir / "loandesk.db"
     cache_path = output_dir / "cache" / "holidays.json"
@@ -96,6 +126,21 @@ def test_run_ingestion_loads_and_stores_data(tmp_path, monkeypatch):
     assert result["asset_records"] == 1
     assert result["borrower_records"] == 1
     assert result["holiday_records"] == 1
+
+    assert result["extraction_records"] == 1
+    assert result["flag_records"] == 1
+    assert result["case_records"] == 1
+
+    assert (output_dir / "extractions.csv").exists()
+    assert (output_dir / "flags.csv").exists()
+    assert (output_dir / "cases.csv").exists()
+
+    flags = pd.read_csv(output_dir / "flags.csv")
+    assert flags.iloc[0]["RuleID"] == "R2"
+    assert flags.iloc[0]["ReasonCode"] == "DAMAGED_OR_INCOMPLETE"
+
+    cases = pd.read_csv(output_dir / "cases.csv")
+    assert cases.iloc[0]["item_condition"] == "damaged"
 
     assert database_path.exists()
     assert (output_dir / "accepted_loans.csv").exists()

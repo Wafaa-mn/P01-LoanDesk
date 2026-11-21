@@ -1,25 +1,34 @@
 CaseID,Severity,RiskScore,ReasonCodes,Status,AssetName,BorrowerAlias,DueDate,ReturnedDate,item_condition
-L-0004,High,0.9,LATE_OR_OVERDUE,New,DJI Osmo Mobile 6 gimbal,Judit B.,2026-10-25,,
-L-0005,High,0.9,LATE_OR_OVERDUE,New,Sony ZV-E10 vlog camera,Anna K.,2026-10-07,2026-10-09,
-L-0011,High,0.9,DUE_ON_HOLIDAY;LATE_OR_OVERDUE;TOO_MANY_OPEN_LOANS,New,Lenovo ThinkPad E14 laptop,Eszter V.,2026-10-23,,
-L-0018,High,0.9,LATE_OR_OVERDUE,New,MacBook Air 13 M2,Judit B.,2026-10-21,,
-L-0037,High,0.9,LATE_OR_OVERDUE,New,Rode Wireless GO II microphone set,Ferenc L.,2026-10-18,,
-L-0047,High,0.9,LATE_OR_OVERDUE,New,Sony ZV-E10 vlog camera,István P.,2026-10-28,,
-L-0050,High,0.9,LATE_OR_OVERDUE,New,Rode Wireless GO II microphone set,Gábor N.,2026-10-02,2026-10-05,
-L-0052,High,0.9,LATE_OR_OVERDUE,New,DJI Osmo Mobile 6 gimbal,Anna K.,2026-10-05,2026-10-07,
-L-0056,High,0.9,LATE_OR_OVERDUE,New,Epson EF-12 mini projector,Gábor N.,2026-10-12,,
-L-0058,High,0.9,LATE_OR_OVERDUE,New,Epson EF-12 mini projector,István P.,2026-09-30,2026-10-06,
-L-0059,High,0.9,LATE_OR_OVERDUE,New,MacBook Air 13 M2,Hanna S.,2026-09-18,2026-09-20,
-L-0002,Medium,0.6,DUE_ON_HOLIDAY;TOO_MANY_OPEN_LOANS,New,Sony ZV-E10 vlog camera,Eszter V.,2026-12-25,,
-L-0006,Medium,0.6,TOO_MANY_OPEN_LOANS,New,MacBook Air 13 M2,Dávid R.,2026-10-30,,
-L-0009,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Canon EOS 250D camera kit,Dávid R.,2026-11-08,,
-L-0016,Medium,0.6,DUE_ON_HOLIDAY,New,Lenovo ThinkPad E14 laptop,István P.,2026-12-26,,
-L-0020,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Epson EF-12 mini projector,Csilla M.,2026-11-08,,
-L-0026,Medium,0.6,TOO_MANY_OPEN_LOANS,New,iPad 10th generation,Csilla M.,2026-11-26,,
-L-0027,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Dell Latitude 5440 laptop,Csilla M.,2026-11-24,,
-L-0035,Medium,0.6,DUE_ON_HOLIDAY,New,Zoom H5 audio recorder,Ferenc L.,2026-12-26,,
-L-0041,Medium,0.6,DUE_ON_HOLIDAY,New,Zoom H5 audio recorder,Hanna S.,2026-12-25,,
-L-0045,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Zoom H5 audio recorder,Eszter V.,2026-11-08,,
-L-0046,Medium,0.6,TOO_MANY_OPEN_LOANS,New,DJI Osmo Mobile 6 gimbal,Dávid R.,2026-10-30,,
-L-0049,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Lenovo ThinkPad E14 laptop,Dávid R.,2026-11-16,,
-L-0055,Medium,0.6,DUE_ON_HOLIDAY,New,Dell Latitude 5440 laptop,Gábor N.,2026-12-25,,
+L-0003,High,0.9,DAMAGED_OR_INCOMPLETE,New,Rode Wireless GO II microphone set,Anna K.,2026-10-10,2026-10-09,damaged
+L-0004,High,0.9,LATE_OR_OVERDUE,New,DJI Osmo Mobile 6 gimbal,Judit B.,2026-10-25,,not_inspected
+L-0005,High,0.9,LATE_OR_OVERDUE,New,Sony ZV-E10 vlog camera,Anna K.,2026-10-07,2026-10-09,good
+L-0007,High,0.9,DAMAGED_OR_INCOMPLETE,New,Zoom H5 audio recorder,István P.,2026-10-10,2026-10-10,good
+L-0011,High,0.9,DUE_ON_HOLIDAY;LATE_OR_OVERDUE;TOO_MANY_OPEN_LOANS,New,Lenovo ThinkPad E14 laptop,Eszter V.,2026-10-23,,not_inspected
+L-0013,High,0.9,DAMAGED_OR_INCOMPLETE,New,Lenovo ThinkPad E14 laptop,István P.,2026-09-27,2026-09-27,damaged
+L-0018,High,0.9,LATE_OR_OVERDUE;EXTENSION_ON_OVERDUE,New,MacBook Air 13 M2,Judit B.,2026-10-21,,not_inspected
+L-0023,High,0.9,DAMAGED_OR_INCOMPLETE,New,Dell Latitude 5440 laptop,István P.,2026-10-22,2026-10-22,damaged
+L-0029,High,0.9,DAMAGED_OR_INCOMPLETE,New,DJI Osmo Mobile 6 gimbal,Hanna S.,2026-10-24,2026-10-24,damaged
+L-0037,High,0.9,LATE_OR_OVERDUE,New,Rode Wireless GO II microphone set,Ferenc L.,2026-10-18,,not_inspected
+L-0038,High,0.9,DAMAGED_OR_INCOMPLETE,New,Zoom H5 audio recorder,Hanna S.,2026-10-24,2026-10-22,good
+L-0040,High,0.9,DAMAGED_OR_INCOMPLETE,New,Canon EOS 250D camera kit,Hanna S.,2026-10-21,2026-10-19,good
+L-0043,High,0.9,DAMAGED_OR_INCOMPLETE,New,Rode Wireless GO II microphone set,Gábor N.,2026-10-12,2026-10-10,good
+L-0047,High,0.9,LATE_OR_OVERDUE;EXTENSION_ON_OVERDUE,New,Sony ZV-E10 vlog camera,István P.,2026-10-28,,not_inspected
+L-0050,High,0.9,LATE_OR_OVERDUE,New,Rode Wireless GO II microphone set,Gábor N.,2026-10-02,2026-10-05,good
+L-0051,High,0.9,DAMAGED_OR_INCOMPLETE,New,Epson EF-12 mini projector,Anna K.,2026-10-06,2026-10-04,damaged
+L-0052,High,0.9,LATE_OR_OVERDUE,New,DJI Osmo Mobile 6 gimbal,Anna K.,2026-10-05,2026-10-07,good
+L-0056,High,0.9,LATE_OR_OVERDUE,New,Epson EF-12 mini projector,Gábor N.,2026-10-12,,not_inspected
+L-0058,High,0.9,LATE_OR_OVERDUE,New,Epson EF-12 mini projector,István P.,2026-09-30,2026-10-06,good
+L-0059,High,0.9,LATE_OR_OVERDUE,New,MacBook Air 13 M2,Hanna S.,2026-09-18,2026-09-20,worn
+L-0002,Medium,0.6,DUE_ON_HOLIDAY;TOO_MANY_OPEN_LOANS,New,Sony ZV-E10 vlog camera,Eszter V.,2026-12-25,,not_inspected
+L-0006,Medium,0.6,TOO_MANY_OPEN_LOANS,New,MacBook Air 13 M2,Dávid R.,2026-10-30,,not_inspected
+L-0009,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Canon EOS 250D camera kit,Dávid R.,2026-11-08,,not_inspected
+L-0016,Medium,0.6,DUE_ON_HOLIDAY,New,Lenovo ThinkPad E14 laptop,István P.,2026-12-26,,not_inspected
+L-0020,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Epson EF-12 mini projector,Csilla M.,2026-11-08,,not_inspected
+L-0026,Medium,0.6,TOO_MANY_OPEN_LOANS,New,iPad 10th generation,Csilla M.,2026-11-26,,not_inspected
+L-0027,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Dell Latitude 5440 laptop,Csilla M.,2026-11-24,,not_inspected
+L-0035,Medium,0.6,DUE_ON_HOLIDAY,New,Zoom H5 audio recorder,Ferenc L.,2026-12-26,,not_inspected
+L-0041,Medium,0.6,DUE_ON_HOLIDAY,New,Zoom H5 audio recorder,Hanna S.,2026-12-25,,not_inspected
+L-0045,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Zoom H5 audio recorder,Eszter V.,2026-11-08,,not_inspected
+L-0046,Medium,0.6,TOO_MANY_OPEN_LOANS,New,DJI Osmo Mobile 6 gimbal,Dávid R.,2026-10-30,,not_inspected
+L-0049,Medium,0.6,TOO_MANY_OPEN_LOANS,New,Lenovo ThinkPad E14 laptop,Dávid R.,2026-11-16,,not_inspected
+L-0055,Medium,0.6,DUE_ON_HOLIDAY,New,Dell Latitude 5440 laptop,Gábor N.,2026-12-25,,not_inspected

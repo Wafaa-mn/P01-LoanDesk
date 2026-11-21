@@ -67,3 +67,21 @@ API_TIMEOUT = 10
 
 # SQLite database
 DATABASE_FILE = OUTPUT_DIR / "loandesk.db"
+
+
+# Gemini model used for structured extraction
+GEMINI_MODEL = "gemini-3.1-flash-lite"
+
+# Extraction output
+EXTRACTIONS_FILE = OUTPUT_DIR / "extractions.csv"
+
+# Development-set evaluation output
+LLM_DEV_EVAL_FILE = OUTPUT_DIR / "llm_dev_eval.csv"
+
+# Cache for Gemini extraction responses
+EXTRACTION_CACHE_DIR = CACHE_DIR / "gemini_extractions"
+
+# Gemini API retry configuration
+GEMINI_MAX_ATTEMPTS = 3
+GEMINI_RETRY_DELAY = 2
+

@@ -1,0 +1,11 @@
+DevID,item_condition,missing_accessories,extension_requested,extraction_status,condition_correct,accessories_correct,extension_correct
+DEV-01,good,[],False,ok,True,True,True
+DEV-02,worn,[],False,ok,True,True,True
+DEV-03,damaged,[],False,ok,True,True,True
+DEV-04,good,"[""power cable""]",False,ok,True,True,True
+DEV-05,damaged,"[""remote control"", ""HDMI cable""]",False,ok,True,True,True
+DEV-06,not_inspected,[],True,ok,True,True,True
+DEV-07,not_inspected,[],False,ok,True,True,True
+DEV-08,worn,"[""stylus""]",False,ok,True,True,True
+DEV-09,good,[],False,ok,True,True,True
+DEV-10,damaged,"[""windscreen""]",False,ok,True,True,True
